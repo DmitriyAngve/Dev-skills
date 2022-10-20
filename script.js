@@ -4,4 +4,6 @@
 const x = '23';
 if (x === 23) console.log(23);
 
-const caclAge = (birthYear) => 2037 - birthYear;
+const caclAge = birthYear => 2037 - birthYear;
+
+console.log();
