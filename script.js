@@ -121,3 +121,36 @@ const amplitudeBug = caclTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
 // A) IDENTIFY A BUGG
 console.log(amplitudeBug);
 */
+
+// ------CODING CHALLENGE------------
+
+// const arr = [17, 21, 23];
+
+// const printForecast = function (arr) {
+//   return `... ${arr[0]}C in 1 days... ${arr[1]}C in 2 days... ${arr[2]}C in 3 days`;
+// };
+// console.log(printForecast(arr));
+
+// 1) Understanding he problem
+// - Array transformed to string, separated by ...
+// - What is the X days? Answer: index + 1
+
+// 2) Breaking up into sub-problems
+// - Transform array into string
+// - Transform each element to string with C
+// - Strings need to contain day (index + 1)
+// - Add ... between elemnts and start and end of string
+// - Log string to console
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+const printForecast = function (arr) {
+  let str = '';
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}C in ${i + 1} days ... `; //called index of array without square brackets ! Remember this
+  }
+  console.log('...' + str); // '...' add here
+};
+
+printForecast(data2);
