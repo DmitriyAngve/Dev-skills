@@ -11,7 +11,7 @@
 // -----------PROBLEM #1---------------
 //We work for a company building a smart home thermoneter. Our most recent task is thisL "Given an array of temperaures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might he a sensor error."
 
-const temreratures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+// const temreratures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 
 // 1) understanding the problem
 // - What is temp amplitude? Answer: difference between highest and lowest temp
@@ -72,3 +72,52 @@ const temreratures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 
 // const amplitudeNew = caclTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
 // console.log(amplitudeNew);
+
+//----------Debugging and Breakpoints -----------------
+/*
+const meaureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    utin: 'celsius',
+    // C) FIX A BUGG (add method Number before the promp method)
+    // value: Number(prompt('Degrees celsius:')),
+    value: 10,
+  };
+
+  // B) FIND A BUGG
+  console.table(measurement);
+
+  //   console.log(measurement.value);
+  //   console.warn(measurement.value);
+  //   console.error(measurement.value);
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+// A) IDENTIFY A BUGG
+console.log(meaureKelvin());
+
+// USING A DEBUGGER
+const caclTempAmplitudeBug = function (t1, t2) {
+  const temps = t1.concat(t2);
+  console.log(temps);
+
+  let max = 0;
+  let min = 0;
+
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== 'number') continue;
+
+    debugger;
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+
+const amplitudeBug = caclTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
+// A) IDENTIFY A BUGG
+console.log(amplitudeBug);
+*/
